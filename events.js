@@ -7,8 +7,21 @@
 //     alert("h2 has been selected")
 // }
 
-document.querySelector("#h3").addEventListener("click", ()=>{
+// document.querySelector("#h3").addEventListener("click", ()=>{
 
-alert("H3 Has Been Selected")
+// alert("H3 Has Been Selected")
 
-})
+// })
+
+// Event Bubbling and Capturing
+
+document.querySelector("#List").addEventListener("click",(e)=>
+{
+console.log("List")
+
+},false)
+document.querySelector("#l3").addEventListener("click",(e)=>
+{
+console.log("List 3 clicked")
+e.stopPropagation()                 // to stop Bubbling 
+},false)
